@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Problem 1</title>
+    </head>
+    <body>
+        <textarea id="text"></textarea>
+        <p id="char-count">0 / 100</p>
+        <script>
+            (function() {
+            const ta = document.getElementById("text");
+            const cc = document.getElementById("char-count");
+            const maxLimit = 100;
+
+            ta.addEventListener("input", function() {
+            const length = ta.value.length;
+            cc.textContent = `${length} / ${maxLimit}`;
+
+            if (length > maxLimit) {
+                cc.style.color = "red";
+            } else {
+                cc.style.color = "black";
+            }
+            });
+        })();
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Problem 1</title>
+    </head>
+    <body>
+        <button id="btn">Click</button>
+        <p id="count">0</p>
+        <script>
+        (function() {
+        const button = document.getElementById("btn");
+        const countDisplay = document.getElementById("count");
+
+        let count = 0;
+        let sec = false;
+
+        button.addEventListener("click", function() {
+                if (!sec) {
+                count++;
+                countDisplay.textContent = count;
+                sec = true;
+
+                setTimeout(() => {
+                sec = false; 
+                }, 1000);
+            }
+        });
+    })();
+    </script>
+
+    </body>
+</html>
